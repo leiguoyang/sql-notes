@@ -85,7 +85,13 @@ Limit用来限定输出的record数量。
 Group by对数据进行分类汇总。
 
 ### Having
+Having就是对汇总的数据进一步筛选。
 
+```
+SELECT COUNT(column_name)
+FROM table_name
+HAVING COUNT(column_name) > value;
+```
 
 ### Function
 
