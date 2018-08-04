@@ -62,12 +62,20 @@ FROM table_name
 ORDER BY column_name
 ```
 
-或依据多个栏进行排序, 请注意先后顺序。
+或依据多个栏进行排序, 先写的栏位会先排序。
 
 ```
 SELECT column_name
 FROM table_name
 ORDER BY column_name_one, column_name_two
+```
+
+如果上面的例子需要一个升序，一个降序，则可以这样写。
+
+```
+SELECT column_name
+FROM table_name
+ORDER BY column_name_one ASC, column_name_two DESC
 ```
 
 ### Limit
