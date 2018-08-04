@@ -16,13 +16,13 @@ Select用来获取表中的栏, 如获取所有的栏。
 
 ```
 SELECT *
-FROM table_name
+FROM table_name;
 ```
 
 获取特定的栏。
 ```
 SELECT column_name
-FROM table_name
+FROM table_name;
 ```
 
 ### Alias
@@ -30,13 +30,12 @@ FROM table_name
 
 ```
 SELECT column_name AS alias_name
-FROM table_name
-
+FROM table_name;
 ```
 
 ```
 SELECT column_name
-FROM table_name AS alias_name
+FROM table_name AS alias_name;
 ```
 
 ### Where
@@ -45,7 +44,7 @@ Where用来选取符合特定条件的数据。
 ```
 SELECT column_name
 FROM table_name
-WHERE column_name = value
+WHERE column_name = value;
 ```
 
 ### Condition
@@ -59,7 +58,7 @@ Order by用来对数据依据其中一栏或多栏的大小进行排序，如升
 ```
 SELECT column_name
 FROM table_name
-ORDER BY column_name
+ORDER BY column_name;
 ```
 
 或依据多个栏进行排序, 先写的栏位会先排序。
@@ -67,7 +66,7 @@ ORDER BY column_name
 ```
 SELECT column_name
 FROM table_name
-ORDER BY column_name_one, column_name_two
+ORDER BY column_name_one, column_name_two;
 ```
 
 如果上面的例子需要一个升序，一个降序，则可以这样写。
@@ -75,7 +74,7 @@ ORDER BY column_name_one, column_name_two
 ```
 SELECT column_name
 FROM table_name
-ORDER BY column_name_one ASC, column_name_two DESC
+ORDER BY column_name_one ASC, column_name_two DESC;
 ```
 
 ### Limit
@@ -85,7 +84,13 @@ Limit用来限定输出的record数量。
 Group by对数据进行分类汇总。
 
 ### Having
+Having就是对汇总的数据进一步筛选。
 
+```
+SELECT COUNT(column_name)
+FROM table_name
+HAVING COUNT(column_name) > value;
+```
 
 ### Function
 
