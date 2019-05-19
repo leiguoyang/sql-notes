@@ -109,3 +109,6 @@ HAVING COUNT(column_name) > value;
 - one to one
 - one to many
 - many to many
+
+## SQLite
+- `sqlite3 [file_name]` 打开sqlite文件
