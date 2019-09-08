@@ -90,7 +90,7 @@ GROUP BY column_name_02;
 ```
 
 ### Having
-Having就是对汇总的数据进一步筛选。
+Having就是对汇总的数据进一步筛选。The `having` command is used instead of `where` with aggregate function.
 
 ```
 SELECT COUNT(column_name)
