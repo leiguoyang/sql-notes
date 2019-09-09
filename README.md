@@ -51,7 +51,7 @@ WHERE column_name = value;
 And, or, between, not, in, like, >, >=, <, <=, =, !=
 
 ### Joins
-Joins可以将多个表进行关联而得到新的result set. Joins的类型有inner join和outer join。
+Joins可以通过primary key和foreign key将多个表进行关联而得到新的result set. Joins的类型有inner join和outer join。
 
 ```
 SELECT table_a.column_01, table_b_column_01
