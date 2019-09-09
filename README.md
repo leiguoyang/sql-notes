@@ -113,6 +113,31 @@ FROM table_name
 HAVING COUNT(column_name) > value;
 ```
 
+### Union
+Union对多个表进行merge. UNION selects only distinct values. Use UNION ALL to also select duplicate values.
+
+Notice that each SELECT statement within the UNION must
+
+- Have the same number of columns.
+- The columns must also have similar data types.
+- Also, the columns in each SELECT statement must be in the same order.
+
+```
+SELECT column_name FROM table_a
+UNION
+SELECT column_name FROM table_b;
+```
+
+The column names in the result-set of a UNION are usually equal to the column names in the first SELECT statement in the UNION.
+
+`UNION ALL`
+
+```
+SELECT column_name FROM table_a
+UNION ALL
+SELECT column_name FROM table_b;
+```
+
 ### Function
 
 
