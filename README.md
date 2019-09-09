@@ -58,6 +58,7 @@ SELECT table_a.column_01, table_b_column_01
 FROM table_a
 INNER JOIN table_b
 ON table_a.column_03 = table_b.column_03;
+```
 
 各类型的Join返回的是
 
@@ -65,7 +66,6 @@ ON table_a.column_03 = table_b.column_03;
 - `LEFT JOIN` Return all rows from the left table, and the matched rows from the right table.
 - `RIGHT JOIN` Return all rows from the right table, and the matched rows from the left table.
 - `FULL JOIN` Return all rows when there is a match in ONE of the tables.
-```
 
 ### Order by
 Order by用来对数据依据其中一栏或多栏的大小进行排序，如升序或降序，默认是升序。
