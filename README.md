@@ -158,3 +158,16 @@ SELECT column_name FROM table_b;
 
 ## SQLite
 - `sqlite3 [file_name]` 打开sqlite文件
+
+## Comment
+One line comment
+
+```
+-- comments comes here
+```
+
+Block comment
+
+```
+/* comment comes here */
+```
