@@ -38,6 +38,13 @@ SELECT column_name
 FROM table_name AS alias_name;
 ```
 
+也可以不用`AS`来定义alias，这两者没有区别，只是`AS`是一种explicit的方式。
+
+```
+SELECT column_name
+FROM table_name alias_name;
+```
+
 ### Where
 Where用来选取符合特定条件的数据。
 
