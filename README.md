@@ -145,6 +145,16 @@ UNION ALL
 SELECT column_name FROM table_b;
 ```
 
+### Calculated field
+
+```
+SELECT name, price, quantity, price * quantity AS total FROM order_details;
+```
+
+其中，`price * quantity AS total`是calculated field.
+
+如你的table里有`first name`和`last name`, 你可以做个`full name`作为calculated field.
+
 ### Function
 
 
