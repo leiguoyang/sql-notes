@@ -145,6 +145,18 @@ UNION ALL
 SELECT column_name FROM table_b;
 ```
 
+### With clause
+
+The SQL `WITH` clause allows you to give a sub-query block a name, which can be referenced in several places within the main SQL query. 
+
+```
+WITH employee AS (SELECT * FROM Employees)
+SELECT * FROM employee WHERE ID < 20
+UNION ALL
+SELECT * FROM employee WHERE Sex = 'M'
+```
+
+
 ### Calculated field
 
 ```
