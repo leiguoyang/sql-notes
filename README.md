@@ -111,6 +111,32 @@ FROM table_name
 GROUP BY column_name_02;
 ```
 
+Group by多栏其实就是对同时满足多个条件的rows进行分类汇总。
+
+假如有如下的数据
+
+```
+Table: Subject_Selection
+
+Subject   Semester   Attendee
+---------------------------------
+ITB001    1          John
+ITB001    1          Bob
+ITB001    1          Mickey
+ITB001    2          Jenny
+ITB001    2          James
+MKB114    1          John
+MKB114    1          Erica
+```
+
+我想看每个学期每个课程的参与人数，那就可以query如下
+
+```
+SELECT Subject, Semester, COUNT(Attendee)
+FROM Subject_Selection
+GROUP BY Subject, Semester
+```
+
 ### Having
 Having就是对汇总的数据进一步筛选。The `having` command is used instead of `where` with aggregate function.
 
