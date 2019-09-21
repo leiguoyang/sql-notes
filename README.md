@@ -1,15 +1,27 @@
 # SQL notes
 About getting data, setting data and table relationships.
 
+## Table of content
+- [Getting data](#getting-data)
+  - [Select](#select)
+  - [Alias](#alias)
+  - [Where](#where)
+  - [Condition](#condition)
+  - [Joins](#joins)
+  - [Order by](#order-by)
+  - [Limit](#limit)
+  - [Group by](#group-by)
+  - [Having](#having)
+  - [Union](#union)
+  - [With clause](#with-clause)
+  - [Calculated field](#calculated-field)
+  - [Function](#function)
+- [Setting data](#setting-data)
+- [View](#view)
+- [SQLite](#sqlite)
+- [Comment](#comment)
+
 ## Getting data
-- Select (select some columns from the table; and calculated fields?)
-- Alias (column alias, table alias)
-- Joins (Inner join, left join and self join)
-- Order (Ascending order and descending order)
-- Limit (limit the amount of record returned)
-- Group by
-- Having
-- Function (aggregate function and scalar function
 
 ### Select
 Select用来获取表中的栏, 如获取所有的栏。
