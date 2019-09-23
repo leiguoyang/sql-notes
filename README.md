@@ -16,6 +16,7 @@ About getting data, setting data and table relationships.
   - [With clause](#with-clause)
   - [Calculated field](#calculated-field)
   - [Function](#function)
+  - [Subquery](#subquery)
 - [Setting data](#setting-data)
 - [View](#view)
 - [SQLite](#sqlite)
@@ -207,6 +208,17 @@ SELECT name, price, quantity, price * quantity AS total FROM order_details;
 
 ### Function
 
+### Subquery
+
+下面的query是Finds employees whose salary is greater than the average salary of all employees.
+
+```
+SELECT employees_id, first_name, salary
+FROM emmployees
+WHERE salary > (SELECT AVG(salary) FROM emmployees) ;
+```
+
+其中，`SELECT AVG(salary) FROM emmployees`是一个subquery.
 
 ## Setting data
 - Insert a new record
