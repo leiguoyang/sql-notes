@@ -58,6 +58,43 @@ SELECT column_name
 FROM table_name alias_name;
 ```
 
+column alias 不可用于calculated field, `WHERE`和`GROUP BY`，否则会报错。如下例子
+
+```
+SELECT Customers.CustomerName, COUNT(Orders.OrderID) AS Orders_qty,
+CASE
+WHEN Orders_qty >= 5 THEN 'high'
+ELSE 'low' END AS Priority
+FROM Customers
+LEFT JOIN Orders
+ON Customers.CustomerID=Orders.CustomerID
+GROUP BY Customers.CustomerName
+ORDER BY Orders_qty DESC;
+```
+
+`Error 1: could not prepare statement (1 no such column: Orders_qty)`.正确为
+
+```
+SELECT Customers.CustomerName, COUNT(Orders.OrderID) AS Orders_qty,
+CASE
+WHEN COUNT(Orders.OrderID) >= 5 THEN 'high'
+ELSE 'low' END AS Priority
+FROM Customers
+LEFT JOIN Orders
+ON Customers.CustomerID=Orders.CustomerID
+GROUP BY Customers.CustomerName
+ORDER BY Orders_qty DESC;
+```
+
+但可用于`ORDER BY`.这和SQL的运行顺序有关。SQL的运行顺序如下：
+
+1. FROM clause
+2. WHERE clause
+3. GROUP BY clause
+4. HAVING clause
+5. SELECT clause
+6. ORDER BY clause
+
 ### Where
 Where用来选取符合特定条件的数据。
 
