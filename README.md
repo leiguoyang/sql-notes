@@ -17,6 +17,7 @@ About getting data, setting data and table relationships.
   - [Calculated field](#calculated-field)
   - [Function](#function)
   - [Subquery](#subquery)
+  - [Case when](#case-when)
 - [Setting data](#setting-data)
 - [View](#view)
 - [SQLite](#sqlite)
@@ -256,6 +257,24 @@ WHERE salary > (SELECT AVG(salary) FROM emmployees) ;
 ```
 
 其中，`SELECT AVG(salary) FROM emmployees`是一个subquery.
+
+### Case when
+
+```
+CASE WHEN conditional THEN returned_value_01
+WHEN conditional THEN returned_value_02
+ELSE returned_value_03
+END
+```
+
+or
+
+```
+CASE WHEN conditional THEN returned_value_01
+WHEN conditional THEN returned_value_02
+ELSE returned_value_03
+END AS alias_name
+```
 
 ## Setting data
 - Insert a new record
