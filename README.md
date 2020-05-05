@@ -125,6 +125,10 @@ ON table_a.column_03 = table_b.column_03;
 - `RIGHT JOIN` Return all rows from the right table, and the matched rows from the left table.
 - `FULL JOIN` Return all rows when there is a match in ONE of the tables.
 
+#### Self-join
+
+In self-join, you need to use aliases to distinguish the two same tables, for example, the `users` table.
+
 ### Order by
 Order by用来对数据依据其中一栏或多栏的大小进行排序，如升序或降序，默认是升序。
 
