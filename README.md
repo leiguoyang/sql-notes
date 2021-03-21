@@ -250,7 +250,7 @@ SELECT name, price, quantity, price * quantity AS total FROM order_details;
 
 ### Function
 
-'avg' returns the average of values, null values are ignored. The returned data type is determined by the input values. For example, if the input data type is integer, the returned type is integer also. So be careful. Sometimes what you want to return is floating point, so convert the integer to floating point before calcuation.
+`avg` function returns the average of values, null values are ignored. The returned data type is determined by the input values. For example, if the input data type is integer, the returned type is integer also. So be careful. Sometimes what you want to return is floating point, so convert the integer to floating point before calcuation.
 
 
 ### Subquery
